@@ -53,18 +53,179 @@ table {
   box-sizing: border-box;
 }
 
+button{
+	all:unset;
+}
+
 :root{
   --primary-font:'Poppins', sans-serif;
   --text-body:#B7B7B7;
   --text-title:#F8F8F8;
   font-size: 16px;
+  --32pt:2rem;
+  --24pt:1.5rem;
+}
+
+/*---- UTILITIES ----*/
+.XXXIIpt{
+	font-size: var(--32pt);
+}
+
+.XXIVpt{
+	font-size: var(--24pt);
+}
+
+.semi-bold{
+	font-weight:600;
+}
+
+.text-center{
+	text-align: center;
+}
+
+/*---- CLASS SPECIFIC ---- */
+.--app{
+	font-family:var(--primary-font);
+	min-width:320px;
+	max-width: 550px;
+	margin:3em auto;
+	border:1px solid black;
+	border-radius:15px;
+}
+
+.--header{
+	display:flex;
+	justify-content: space-between;
+	align-items: center;
+	max-height:81px;
 }
 
 .--header-icon{
   width:2.125em;
   height:2.125em;
+  margin:1.4375em 1em;
 }
 
-span{
-  font-size: 2.125em;
+.--header-span{
+  	font-size: 2.125em;
+  	background: rgb(62,236,117);
+	background: linear-gradient(90deg, rgba(62,236,117,1) 0%, rgba(45,189,141,1) 35%, rgba(0,212,255,1) 100%);
+	padding:.25em .75em;
+	border-radius: 25px;
+	color:white;
+}
+
+.--profile{
+	color:white;
+	margin:0 0.5em;
+	display:grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 439px 63.33px auto auto;
+}
+
+.--profile-img,
+.--placeholder-profile-icon,
+.--profile-reject-icon,
+.--profile-like-icon,
+.--profile-title,
+.--profile-text,
+.--action-buttons{
+	grid-column:1/2;
+}
+
+.--profile-img{
+	grid-row:1/4;
+	border-radius:15px;
+}
+.--placeholder-profile-icon,
+.--profile-reject-icon,
+.--profile-like-icon{
+	grid-row:1/2;
+	width:152px;
+	margin:.25em .25em;
+}
+
+.--profile-title{
+	grid-row: 2/3;
+	padding:0 .25em;
+}
+
+.--profile-text{
+	grid-row:3/4;
+	padding:.5em .25em;
+}
+
+.--profile-img,
+.--no-profile-img{
+	width:100%;
+	height:100%;
+	object-fit: cover;
+}
+
+.--action-buttons{
+	grid-row: 4/5;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	margin:.5em 0;
+}
+
+.btn{
+	border-radius:50%;
+	background-color: white;
+	cursor: pointer;
+}
+
+.--reject-btn:hover,
+.--reject-btn:focus{
+	background-color: #FFE7EF;
+}
+
+.--like-btn:hover,
+.--like-btn:focus{
+	background-color:#DBFFF4;
+}
+
+.--action-icon{
+	width:40px;
+	height:36px;
+	margin:.625em .5em;
+}
+
+.--no-profile{
+	display:grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 8em 100px auto 2em;
+	margin:1em 1em;
+}
+
+.--no-profile-img,
+.--no-profile-emoji,
+.--no-profile-text{
+	grid-column: 1/2;
+}
+
+.--no-profile-img{
+	grid-row:1/5;
+	border-radius:15px;
+}
+
+
+.--no-profile-emoji{
+	grid-row:2/3;
+	font-size:80px;
+}
+
+.--no-profile-text{
+	grid-row:3/4;
+	color:white;
+	font-family: var(--primary-font);
+	font-size:3rem;
+	font-weight:600;
+}
+
+@media (min-width:768px){
+	.--profile{
+		grid-template-rows:467px 35px auto;
+	}
 }

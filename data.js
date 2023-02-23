@@ -1,30 +1,28 @@
-const locations = [
-    {
-        id:'canyon',
+const locations = {
+    canyon:{
         name: "Grand Canyon",
         avatar: "images/GrandCanyon.jpg",
         price: 829,
         bio: "Mysterious. Overpowering. Strange.",
         hasBeenSwiped: false,
         hasBeenLiked: false
-    },{
-        id:"rushmore",
+    },
+    rushmore:{
         name: "Mount Rushmore",
         avatar: "images/MountRushmore.jpg",
-        age: 1152,
+        price: 1152,
         bio: "The Shrine of Democracy",
         hasBeenSwiped: false,
         hasBeenLiked: false
     },
-    {
-        id:"liberty",
+    liberty:{
         name: "Statue of Liberty",
         avatar: "images/StatueOfLiberty.jpg",
-        age: 1649,
+        price: 1649,
         bio: "Liberty Enlightening the World",
         hasBeenSwiped: false,
         hasBeenLiked: false
     }
-]
+}
 
 export default locations
